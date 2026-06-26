@@ -1,7 +1,7 @@
 <!-- HERO SECTION -->
 <section id="home">
   <h1>Raj Mahida</h1>
-  <p>Hi Welcome to my porfolio I made this so i can share my innformation with people who need it.</p..>
+  <p>Hi Welcome to my porfolio I made this so i can share my innformation with people who need it.</p>
 </section>
 
 <!-- ABOUT -->
@@ -51,12 +51,12 @@ a director like
     <h3>Project Title</h3>
     <p>Making this porflio
 helping with my kids porfllios
-computer promblms like I have to make slideshows and slideshows for work which I like to call projects.</p>
+s.</p>
   </div>
 
   <div class="project">
     <h3>Project Title</h3>
-    <p>
+    <p> computer promblms like I have to make slideshows and slideshows for work which I like to call project
   </div>
 </section>
 
