@@ -1,70 +1,173 @@
-<!-- HERO SECTION -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raj Mahida Portfolio</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #003366;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        nav {
+            background: #0055a5;
+            text-align: center;
+            padding: 12px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        section {
+            background: white;
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 8px rgba(0,0,0,0.15);
+        }
+
+        h2 {
+            color: #003366;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .project {
+            background: #f8f8f8;
+            padding: 15px;
+            border-left: 5px solid #0055a5;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Raj Mahida</h1>
+    <p>Professional Portfolio</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+</nav>
+
 <section id="home">
-  <h1>Raj Mahida</h1>
-  <p>Hi Welcome to my porfolio I made this so i can share my innformation with people who need it.</p>
+    <h2>Home</h2>
+    <p>
+        Hi! Welcome to my portfolio. I made this so I can share my information with people who need it.
+    </p>
 </section>
 
-<!-- ABOUT -->
 <section id="about">
-  <h2>About Me</h2>
-  <p>
-    Hi my name is Raj Mahida I am from india I studied there and went to collage there
-for my dedication and education I grew up to be a computer engineer at iquia as my role
-being the director of data arcutectures and I get to stay home for work and go to work sometimes.
-I have 2 kids as well. I have expirenced travel a lot because i go from india to america and for familly 
-vacations.
+    <h2>About Me</h2>
 
-  </p>
+    <p>
+        Hi, my name is Raj Mahida. I am from India. I studied there and went to college there.
+        Through my dedication and education, I became a Computer Engineer at IQVIA,
+        where I work as the Director of Data Architectures.
+        I work from home most of the time and occasionally go into the office.
+        I have two wonderful kids.
+        I have traveled frequently between India and America for work, family, and vacations.
+    </p>
 </section>
 
-<!-- EXPERIENCE -->
 <section id="experience">
-  <h2>Experience</h2>
-  <p>
-I have had some expirences going from india to america finding a job to becaming
-a director like
-. Having to deal with rude people T airports 
-. Having delayed/cancceled flights
-. dissapoinments in issues at work 
-. Bad grades at collagfe
-. Late nights
-. Having 2 kids
-  </p>
+    <h2>Experience</h2>
+
+    <p>
+        I have had many experiences throughout my life, from moving from India to America,
+        finding a job, and eventually becoming a Director.
+    </p>
+
+    <ul>
+        <li>Moving from India to America</li>
+        <li>Finding my first job</li>
+        <li>Becoming a Director of Data Architectures</li>
+        <li>Dealing with rude people at airports</li>
+        <li>Experiencing delayed and canceled flights</li>
+        <li>Overcoming disappointments and challenges at work</li>
+        <li>Working through poor grades in college</li>
+        <li>Working many late nights</li>
+        <li>Raising two children while balancing work and family</li>
+    </ul>
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
-  <h2>Skills</h2>
-  <ul>
-    <li>Skill 1</li>
-    <li>Skill 2</li>
-    <li>Skill 3</li>
-    <li>Skill 4</li>
-  </ul>
+    <h2>Skills</h2>
+
+    <ul>
+        <li>Leadership</li>
+        <li>Computer Engineering</li>
+        <li>Data Architecture</li>
+        <li>Problem Solving</li>
+        <li>Project Management</li>
+        <li>Communication</li>
+        <li>Team Leadership</li>
+        <li>Technology</li>
+    </ul>
 </section>
 
-<!-- PROJECTS -->
 <section id="projects">
-  <h2>Projects</h2>
+    <h2>Projects</h2>
 
-  <div class="project">
-    <h3>Project Title</h3>
-    <p>Making this porflio
-helping with my kids porfllios
-s.</p>
-  </div>
+    <div class="project">
+        <h3>Professional Projects</h3>
 
-  <div class="project">
-    <h3>Project Title</h3>
-    <p> computer promblms like I have to make slideshows and slideshows for work which I like to call project
-  </div>
+        <p>
+            Throughout my career I have worked on technology projects,
+            helped solve computer problems,
+            created presentations and slideshows for work,
+            and supported many business initiatives.
+        </p>
+    </div>
+
+    <div class="project">
+        <h3>Family Projects</h3>
+
+        <p>
+            I helped my children create their portfolios and enjoy supporting them
+            with technology and learning new skills.
+        </p>
+    </div>
+
 </section>
 
-<!-- EDUCATION -->
 <section id="education">
-  <h2>Education</h2>
-  <p>I studied at Doctor Babasaheb Ambedkar Marathwada University
-in india and at the University of Bridgeport in America and got my batchler
-degrees in india in 2000 - 2005 and in america in Jan 2006 – Dec 2007 .</p>
+    <h2>Education</h2>
+
+    <p>
+        I studied at Doctor Babasaheb Ambedkar Marathwada University in India
+        and later attended the University of Bridgeport in the United States.
+
+        I earned my bachelor's degree in India from 2000–2005
+        and continued my education in America from January 2006 through December 2007.
+    </p>
 </section>
 
+</body>
+</html>
