@@ -7,35 +7,22 @@
 
 <style>
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
     text-align: center;
     background: #e0f2fe;
     color: #1f2937;
+    scroll-behavior: smooth;
 }
 
-/* HEADER */
-header {
-    background: linear-gradient(90deg, #1e3a8a, #2563eb);
-    color: white;
-    padding: 30px;
-}
-
-/* PROFILE IMAGE */
-header img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-top: 15px;
-    border: 3px solid white;
-}
-
-/* NAV */
+/* TOP NAV */
 nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
     background: #1d4ed8;
     padding: 12px;
+    z-index: 1000;
 }
 
 nav a {
@@ -49,36 +36,71 @@ nav a:hover {
     text-decoration: underline;
 }
 
+/* HOME SCREEN (POPUP STYLE) */
+#homeScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #1e3a8a, #2563eb);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+#homeScreen h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+#exploreBtn {
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: white;
+    color: #1e3a8a;
+    font-weight: bold;
+}
+
+#exploreBtn:hover {
+    background: #e2e8f0;
+}
+
 /* SECTIONS */
 section {
     background: white;
     max-width: 900px;
-    margin: 30px auto;
+    margin: 80px auto;
     padding: 25px;
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
 
-/* TITLES */
-h1 {
-    font-size: 40px;
+/* PROFILE IMAGE */
+header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 15px;
+    border: 3px solid white;
 }
 
-h2 {
-    color: #1e3a8a;
+/* HEADER */
+header {
+    background: linear-gradient(90deg, #1e3a8a, #2563eb);
+    color: white;
+    padding: 30px;
+    margin-top: 50px;
 }
 
-h3 {
-    color: #2563eb;
-}
-
-/* LISTS */
-ul {
-    list-style-position: inside;
-    padding: 0;
-}
-
-/* PROJECT BOX */
+/* PROJECTS */
 .project {
     background: #f1f5f9;
     border-left: 5px solid #2563eb;
@@ -86,27 +108,18 @@ ul {
     margin-top: 15px;
     border-radius: 8px;
 }
-
-/* FOOTER */
-footer {
-    background: #1e3a8a;
-    color: white;
-    padding: 20px;
-    margin-top: 30px;
-}
 </style>
 </head>
 
 <body>
 
-<header>
+<!-- HOME SCREEN -->
+<div id="homeScreen">
     <h1>Raj Mahida</h1>
-    <p>Director of Data Architectures | Computer Engineer | Technology Leader</p>
+    <button id="exploreBtn" onclick="enterSite()">Explore</button>
+</div>
 
-    <!-- PROFILE PHOTO -->
-    <img src="IMG-1626 (1).jpeg" alt="Profile Photo">
-</header>
-
+<!-- NAV -->
 <nav>
     <a href="#home">Home</a>
     <a href="#about">About</a>
@@ -116,23 +129,24 @@ footer {
     <a href="#education">Education</a>
 </nav>
 
-<section id="home">
-    <h2>Welcome</h2>
-    <p>Welcome to my professional portfolio. I am a technology leader with experience in data architecture and software engineering.</p>
-</section>
+<!-- HEADER -->
+<header id="home">
+    <h1>Raj Mahida</h1>
+    <p>Director of Data Architectures | Computer Engineer | Technology Leader</p>
+    <img src="IMG-1626 (1).jpeg">
+</header>
 
 <section id="about">
     <h2>About Me</h2>
-    <p>Hello! My name is Raj Mahida. I am originally from India and now work in the United States as a Director at IQVIA.</p>
+    <p>Hello! My name is Raj Mahida. I work as a Director at IQVIA.</p>
 </section>
 
 <section id="experience">
     <h2>Experience</h2>
     <ul>
         <li>Director of Data Architectures at IQVIA</li>
-        <li>20+ years in technology and engineering</li>
-        <li>Enterprise data architecture design</li>
-        <li>Team leadership and mentoring</li>
+        <li>20+ years in technology</li>
+        <li>Team leadership</li>
     </ul>
 </section>
 
@@ -140,7 +154,6 @@ footer {
     <h2>Skills</h2>
     <ul>
         <li>Data Architecture</li>
-        <li>Software Engineering</li>
         <li>Leadership</li>
         <li>Problem Solving</li>
     </ul>
@@ -150,27 +163,25 @@ footer {
     <h2>Projects</h2>
 
     <div class="project">
-        <h3>Enterprise Data Systems</h3>
-        <p>Built large-scale data systems for healthcare organizations.</p>
-    </div>
-
-    <div class="project">
-        <h3>Leadership Work</h3>
-        <p>Led engineering teams and managed global projects.</p>
+        <h3>Enterprise Systems</h3>
+        <p>Built large-scale data systems.</p>
     </div>
 </section>
 
 <section id="education">
     <h2>Education</h2>
     <p>
-        Bachelor's Degree (India) 2000–2005<br>
-        Master's Degree (USA) 2006–2007
+        India (2000–2005)<br>
+        USA (2006–2007)
     </p>
 </section>
 
-<footer>
-    <p>© 2026 Raj Mahida</p>
-</footer>
+<!-- SCRIPT -->
+<script>
+function enterSite() {
+    document.getElementById("homeScreen").style.display = "none";
+}
+</script>
 
 </body>
 </html>
