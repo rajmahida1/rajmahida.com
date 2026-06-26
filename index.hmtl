@@ -1,1 +1,70 @@
+<!-- HERO SECTION -->
+<section id="home">
+  <h1>Raj Mahida</h1>
+  <p>Hi Welcome to my porfolio I made this so i can share my innformation with people who need it.</p>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    Hi my name is Raj Mahida I am from india I studied there and went to collage there
+for my dedication and education I grew up to be a computer engineer at iquia as my role
+being the director of data arcutectures and I get to stay home for work and go to work sometimes.
+I have 2 kids as well. I have expirenced travel a lot because i go from india to america and for familly 
+vacations.
+
+  </p>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <h2>Experience</h2>
+  <p>
+I have had some expirences going from india to america finding a job to becaming
+a director like
+. Having to deal with rude people T airports 
+. Having delayed/cancceled flights
+. dissapoinments in issues at work 
+. Bad grades at collagfe
+. Late nights
+. Having 2 kids
+  </p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2>Skills</h2>
+  <ul>
+    <li>Skill 1</li>
+    <li>Skill 2</li>
+    <li>Skill 3</li>
+    <li>Skill 4</li>
+  </ul>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Projects</h2>
+
+  <div class="project">
+    <h3>Project Title</h3>
+    <p>Making this porflio
+helping with my kids porfllios
+computer promblms like I have to make slideshows and slideshows for work which I like to call projects.</p>
+  </div>
+
+  <div class="project">
+    <h3>Project Title</h3>
+    <p>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <h2>Education</h2>
+  <p>I studied at Doctor Babasaheb Ambedkar Marathwada University
+in india and at the University of Bridgeport in America and got my batchler
+degrees in india in 2000 - 2005 and in america in Jan 2006 – Dec 2007 .</p>
+</section>
 
