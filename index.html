@@ -3,212 +3,1868 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Raj Mahida Portfolio</title>
+
+<title>Raj Mahida | Technology Leader</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background: #e0f2fe;
-    color: #1f2937;
-    scroll-behavior: smooth;
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-/* TOP NAV */
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: #1d4ed8;
-    padding: 12px;
-    z-index: 1000;
+html{
+    scroll-behavior:smooth;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#040916;
+    color:#f5f7ff;
+    line-height:1.6;
+    overflow-x:hidden;
 }
 
-nav a:hover {
-    text-decoration: underline;
+
+/* =========================
+   BACKGROUND
+========================= */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-2;
+
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(0,119,255,.20),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 85% 30%,
+            rgba(73,61,255,.18),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(0,190,255,.10),
+            transparent 35%
+        ),
+
+        #040916;
 }
 
-/* HOME SCREEN (POPUP STYLE) */
-#homeScreen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, #1e3a8a, #2563eb);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 2000;
+body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    opacity:.18;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,.04) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.04) 1px,
+            transparent 1px
+        );
+
+    background-size:55px 55px;
 }
 
-#homeScreen h1 {
-    font-size: 60px;
-    margin-bottom: 20px;
+
+/* =========================
+   HOME SCREEN
+========================= */
+
+#homeScreen{
+
+    position:fixed;
+    inset:0;
+
+    z-index:5000;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:30px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(0,119,255,.20),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #02050d,
+            #07132d,
+            #040916
+        );
+
+    transition:opacity .7s ease;
 }
 
-#exploreBtn {
-    padding: 12px 25px;
-    font-size: 18px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    background: white;
-    color: #1e3a8a;
-    font-weight: bold;
+.home-content{
+    max-width:950px;
 }
 
-#exploreBtn:hover {
-    background: #e2e8f0;
+.home-label{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:50px;
+
+    border:1px solid rgba(255,255,255,.12);
+
+    background:rgba(255,255,255,.05);
+
+    color:#63b8ff;
+
+    font-size:13px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    margin-bottom:25px;
 }
 
-/* SECTIONS */
-section {
-    background: white;
-    max-width: 900px;
-    margin: 80px auto;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+#homeScreen h1{
+
+    font-size:clamp(
+        55px,
+        9vw,
+        110px
+    );
+
+    line-height:1;
+
+    margin-bottom:25px;
+
+    font-weight:900;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #65baff,
+            #7d7bff,
+            #ffffff
+        );
+
+    background-size:300%;
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+
+    animation:gradientMove 7s linear infinite;
 }
 
-/* PROFILE IMAGE */
-header img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-top: 15px;
-    border: 3px solid white;
+#homeScreen p{
+
+    max-width:720px;
+
+    margin:auto;
+
+    color:#9ba9c5;
+
+    font-size:20px;
+
+    margin-bottom:40px;
 }
 
-/* HEADER */
-header {
-    background: linear-gradient(90deg, #1e3a8a, #2563eb);
-    color: white;
-    padding: 30px;
-    margin-top: 50px;
+#exploreBtn{
+
+    padding:17px 34px;
+
+    border:none;
+
+    border-radius:13px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #087cff,
+            #6948ff
+        );
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0,119,255,.30);
+
+    transition:.3s;
 }
 
-/* PROJECTS */
-.project {
-    background: #f1f5f9;
-    border-left: 5px solid #2563eb;
-    padding: 15px;
-    margin-top: 15px;
-    border-radius: 8px;
+#exploreBtn:hover{
+
+    transform:
+        translateY(-5px)
+        scale(1.03);
+
+    box-shadow:
+        0 20px 50px
+        rgba(0,119,255,.50);
 }
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:17px 6%;
+
+    background:
+        rgba(4,9,22,.78);
+
+    backdrop-filter:blur(18px);
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.08);
+}
+
+.logo{
+
+    font-size:22px;
+
+    font-weight:900;
+
+    letter-spacing:1px;
+}
+
+.logo span{
+    color:#4caeff;
+}
+
+nav ul{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:25px;
+}
+
+nav a{
+
+    text-decoration:none;
+
+    color:#aebbd3;
+
+    font-size:14px;
+
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#ffffff;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+header{
+
+    min-height:82vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    padding:
+        100px 25px;
+
+    position:relative;
+}
+
+.hero-content{
+
+    max-width:1000px;
+}
+
+.hero-label{
+
+    color:#5ab5ff;
+
+    font-size:14px;
+
+    font-weight:bold;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    margin-bottom:22px;
+}
+
+header h1{
+
+    font-size:
+        clamp(
+            50px,
+            8vw,
+            95px
+        );
+
+    line-height:1;
+
+    margin-bottom:25px;
+}
+
+header h1 span{
+
+    background:
+        linear-gradient(
+            90deg,
+            #43b7ff,
+            #7c67ff
+        );
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+}
+
+header p{
+
+    color:#9daac3;
+
+    font-size:20px;
+
+    max-width:750px;
+
+    margin:auto;
+}
+
+.hero-photo{
+
+    width:190px;
+
+    height:190px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    margin-top:45px;
+
+    border:
+        3px solid
+        rgba(90,181,255,.55);
+
+    box-shadow:
+        0 0 0 12px
+        rgba(70,150,255,.06),
+
+        0 25px 80px
+        rgba(0,0,0,.45);
+
+    transition:.4s;
+}
+
+.hero-photo:hover{
+
+    transform:
+        scale(1.05)
+        rotate(2deg);
+
+    border-color:#58b7ff;
+}
+
+.scroll-text{
+
+    margin-top:40px;
+
+    color:#64738e;
+
+    font-size:12px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    animation:bounce 2s infinite;
+}
+
+
+/* =========================
+   MAIN SECTIONS
+========================= */
+
+.section{
+
+    max-width:1150px;
+
+    margin:auto;
+
+    padding:
+        105px 25px;
+}
+
+.section-header{
+
+    margin-bottom:50px;
+}
+
+.section-number{
+
+    color:#4daeff;
+
+    font-weight:bold;
+
+    font-size:13px;
+
+    letter-spacing:3px;
+}
+
+.section-header h2{
+
+    font-size:
+        clamp(
+            38px,
+            5vw,
+            58px
+        );
+
+    margin-top:7px;
+}
+
+.section-header p{
+
+    color:#7f8da8;
+
+    max-width:700px;
+
+    margin-top:10px;
+}
+
+
+/* =========================
+   GLASS
+========================= */
+
+.glass{
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.075),
+            rgba(255,255,255,.025)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.09);
+
+    backdrop-filter:blur(16px);
+
+    box-shadow:
+        0 20px 60px
+        rgba(0,0,0,.20);
+
+    border-radius:22px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-box{
+
+    padding:40px;
+
+    display:grid;
+
+    grid-template-columns:
+        1fr 2fr;
+
+    gap:50px;
+
+    align-items:center;
+}
+
+.about-title{
+
+    font-size:35px;
+
+    margin-bottom:15px;
+}
+
+.about-text{
+
+    color:#aab6ce;
+
+    font-size:17px;
+}
+
+.about-text strong{
+    color:white;
+}
+
+
+/* =========================
+   EXPERIENCE
+========================= */
+
+.timeline{
+
+    position:relative;
+
+    margin-left:20px;
+
+    padding-left:40px;
+
+    border-left:
+        2px solid
+        rgba(77,174,255,.25);
+}
+
+.timeline-item{
+
+    position:relative;
+
+    margin-bottom:30px;
+
+    padding:28px;
+
+    transition:.35s;
+}
+
+.timeline-item::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:13px;
+
+    height:13px;
+
+    border-radius:50%;
+
+    background:#4db0ff;
+
+    left:-48px;
+
+    top:34px;
+
+    box-shadow:
+        0 0 20px
+        rgba(77,174,255,.8);
+}
+
+.timeline-item:hover{
+
+    transform:
+        translateX(8px);
+
+    border-color:
+        rgba(77,174,255,.35);
+}
+
+.timeline-item h3{
+
+    font-size:20px;
+
+    margin-bottom:6px;
+}
+
+.timeline-item p{
+
+    color:#8290aa;
+
+    font-size:14px;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skill-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:18px;
+}
+
+.skill{
+
+    padding:28px;
+
+    transition:.35s;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.skill:hover{
+
+    transform:
+        translateY(-7px);
+
+    border-color:
+        rgba(77,174,255,.35);
+}
+
+.skill-icon{
+
+    font-size:32px;
+
+    margin-bottom:15px;
+}
+
+.skill h3{
+
+    margin-bottom:7px;
+}
+
+.skill p{
+
+    color:#8491aa;
+
+    font-size:13px;
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+.project-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:20px;
+}
+
+.project{
+
+    padding:32px;
+
+    transition:.35s;
+}
+
+.project:hover{
+
+    transform:
+        translateY(-8px);
+
+    border-color:
+        rgba(77,174,255,.35);
+}
+
+.project-number{
+
+    color:#4db0ff;
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+    margin-bottom:15px;
+}
+
+.project h3{
+
+    font-size:22px;
+
+    margin-bottom:10px;
+}
+
+.project p{
+
+    color:#8996af;
+
+    margin-bottom:7px;
+}
+
+
+/* =========================
+   EDUCATION
+========================= */
+
+.education{
+
+    padding:45px;
+
+    text-align:center;
+}
+
+.education h3{
+
+    font-size:28px;
+
+    margin-bottom:20px;
+}
+
+.education p{
+
+    color:#9aa8c0;
+
+    font-size:17px;
+
+    line-height:2;
+}
+
+.edu-card{
+
+    margin-top:30px;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    background:
+        rgba(255,255,255,.04);
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+}
+
+
+/* =========================
+   TECHNOLOGY BANNER
+========================= */
+
+.tech-banner{
+
+    text-align:center;
+
+    padding:80px 30px;
+
+    margin-bottom:50px;
+
+    border-radius:25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0,119,255,.15),
+            rgba(102,65,255,.13)
+        );
+
+    border:
+        1px solid
+        rgba(77,174,255,.15);
+}
+
+.tech-banner h2{
+
+    font-size:
+        clamp(
+            35px,
+            5vw,
+            55px
+        );
+
+    margin-bottom:15px;
+}
+
+.tech-banner p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    color:#96a4bd;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    text-align:center;
+
+    padding:
+        60px 20px;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,.07);
+
+    color:#64728c;
+}
+
+footer strong{
+    color:#aab6ce;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes gradientMove{
+
+    0%{
+        background-position:0%;
+    }
+
+    50%{
+        background-position:100%;
+    }
+
+    100%{
+        background-position:0%;
+    }
+}
+
+@keyframes bounce{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(8px);
+    }
+}
+
+.reveal{
+
+    opacity:0;
+
+    transform:
+        translateY(35px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+}
+
+.reveal.show{
+
+    opacity:1;
+
+    transform:
+        translateY(0);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:850px){
+
+    nav{
+
+        padding:
+            15px 20px;
+    }
+
+    nav ul{
+
+        display:none;
+    }
+
+    header{
+
+        min-height:75vh;
+    }
+
+    .about-box{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+        padding:30px;
+    }
+
+    .skill-grid{
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .project-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .timeline{
+
+        margin-left:5px;
+    }
+}
+
+@media(max-width:550px){
+
+    .skill-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .section{
+
+        padding:
+            75px 20px;
+    }
+
+    .hero-photo{
+
+        width:155px;
+
+        height:155px;
+    }
+
+    .timeline{
+
+        padding-left:25px;
+    }
+
+    .timeline-item::before{
+
+        left:-33px;
+    }
+}
+
 </style>
 </head>
 
+
 <body>
 
-<!-- HOME SCREEN -->
+
+<!-- =========================
+     INTRO SCREEN
+========================= -->
+
 <div id="homeScreen">
-    <h1>Raj Mahida</h1>
-    <button id="exploreBtn" onclick="enterSite()">Explore</button>
+
+    <div class="home-content">
+
+        <div class="home-label">
+            Technology • Leadership • Innovation
+        </div>
+
+        <h1>
+            Raj Mahida
+        </h1>
+
+        <p>
+            Director of Data Architectures,
+            Computer Engineer, and Technology Leader.
+        </p>
+
+        <button
+            id="exploreBtn"
+            onclick="enterSite()"
+        >
+            Explore Profile →
+        </button>
+
+    </div>
+
 </div>
 
-<!-- NAV -->
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
 <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#experience">Experience</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#education">Education</a>
+
+    <div class="logo">
+        Raj<span>.</span>
+    </div>
+
+    <ul>
+
+        <li>
+            <a href="#home">
+                Home
+            </a>
+        </li>
+
+        <li>
+            <a href="#about">
+                About
+            </a>
+        </li>
+
+        <li>
+            <a href="#experience">
+                Experience
+            </a>
+        </li>
+
+        <li>
+            <a href="#skills">
+                Skills
+            </a>
+        </li>
+
+        <li>
+            <a href="#projects">
+                Projects
+            </a>
+        </li>
+
+        <li>
+            <a href="#education">
+                Education
+            </a>
+        </li>
+
+    </ul>
+
 </nav>
 
-<!-- HEADER -->
+
+<!-- =========================
+     HERO
+========================= -->
+
 <header id="home">
-    <h1>Raj Mahida</h1>
-    <p>Director of Data Architectures | Computer Engineer | Technology Leader</p>
-    <img src="IMG-1626 (1).jpeg">
+
+    <div class="hero-content">
+
+        <div class="hero-label">
+            Director of Data Architectures
+        </div>
+
+        <h1>
+            Raj <span>Mahida</span>
+        </h1>
+
+        <p>
+            Computer Engineer • Technology Leader •
+            Data Architecture • Enterprise Technology
+        </p>
+
+        <img
+            src="IMG-1626 (1).jpeg"
+            class="hero-photo"
+            alt="Raj Mahida"
+        >
+
+        <div class="scroll-text">
+            ↓ Explore my journey
+        </div>
+
+    </div>
+
 </header>
 
-<section id="about">
-    <h2>About Me</h2>
-    <p>Hello! My name is Raj Mahida. I work as the Director of Data Arcutectures at IQVIA.
-    I Play lots of different sports like pickleball,vollyball and cricket and My most favorite 
-    sport is Cricket. I am from India and I came to USA for my studies so I do a lot of traveling
-    I have 2 kids.</p>
-</section>
 
-<section id="experience">
-    <h2>Experience</h2>
-    <ul>
-        <li>Director of Data Architectures at IQVIA</li>
-        <li>20+ years in technology</li>
-        <li>Team leadership</li>
-        <li> Traveling bettween countries</li>
-        <li>Director, Datastore Development</li>
-        <li> Director, Product Engineering</li>
-        <li> Associate Director, Datastore Development</li>
-         <li>Sr. Manager, Database Development</li>
-         <li>Sr. Database Developer and Administrator</li>
-         <li>Database Consultant [again]</li>
-         <li>Database Consultant [again]</li>
-         <li>Database Consultant [again]</li>
-         <li>Database Consultant [again]</li>
-         <li>Database Consultant [again]</li>
+<main>
 
-        
-    </ul>
-</section>
 
-<section id="skills">
-    <h2>Skills</h2>
-    <ul>
-        <li>Data Architecture</li>
-        <li>Leadership</li>
-        <li>Problem Solving</li>
-        <li> Tecnology</li>
-        <li> DTC Mesurement</li>
-        <li> Life Sciences</li>
-        <li> Computer Engineering</li>
-        
-    </ul>
-</section>
+<!-- =========================
+     ABOUT
+========================= -->
 
-<section id="projects">
-    <h2>Projects</h2>
+<section
+    class="section reveal"
+    id="about"
+>
 
-    <div class="project">
-        <h3>Enterprise Systems</h3>
-        <p>Built large-scale data systems.</p>
-        <p> Building Websites</p>
-        <p> Custumer Data Ptatfroms</p>
-        <p> Clear Sky</p>
-        <p>MR</p>
-        <p> Orcistarted Customer Angagement</p>
-        <p> Clear View</p>
+    <div class="section-header">
+
+        <div class="section-number">
+            01 — ABOUT
+        </div>
+
+        <h2>
+            About Me
+        </h2>
+
+        <p>
+            Technology, leadership, family, travel,
+            and a passion for learning.
+        </p>
+
     </div>
+
+
+    <div class="about-box glass">
+
+        <div>
+
+            <div class="skill-icon">
+                🧑‍💻
+            </div>
+
+            <h3 class="about-title">
+                Technology Leader
+            </h3>
+
+        </div>
+
+
+        <div class="about-text">
+
+            <p>
+                Hello! My name is
+                <strong>Raj Mahida.</strong>
+                I work as the Director of Data Architectures
+                at IQVIA.
+            </p>
+
+            <br>
+
+            <p>
+                I play lots of different sports like
+                pickleball, volleyball, and cricket.
+                My favorite sport is cricket.
+            </p>
+
+            <br>
+
+            <p>
+                I am from India and came to the USA
+                for my studies, so I do a lot of traveling.
+                I have 2 kids.
+            </p>
+
+        </div>
+
+    </div>
+
 </section>
 
-<section id="education">
-    <h2>Education</h2>
-    <p>
-        India (2000–2005)at Doctor Babasaheb Ambedkar Marathwada University<br>
-        USA (2006–2007) at University of Bridgeport
-    </p>
+
+<!-- =========================
+     EXPERIENCE
+========================= -->
+
+<section
+    class="section reveal"
+    id="experience"
+>
+
+    <div class="section-header">
+
+        <div class="section-number">
+            02 — EXPERIENCE
+        </div>
+
+        <h2>
+            Career Journey
+        </h2>
+
+        <p>
+            More than 20 years of experience
+            across technology, databases, data,
+            engineering, and leadership.
+        </p>
+
+    </div>
+
+
+    <div class="timeline">
+
+
+        <div class="timeline-item glass">
+
+            <h3>
+                Director of Data Architectures
+            </h3>
+
+            <p>
+                IQVIA
+            </p>
+
+        </div>
+
+
+        <div class="timeline-item glass">
+
+            <h3>
+                Director, Datastore Development
+            </h3>
+
+            <p>
+                Data and technology leadership
+            </p>
+
+        </div>
+
+
+        <div class="timeline-item glass">
+
+            <h3>
+                Director, Product Engineering
+            </h3>
+
+            <p>
+                Product engineering and technology
+            </p>
+
+        </div>
+
+
+        <div class="timeline-item glass">
+
+            <h3>
+                Associate Director,
+                Datastore Development
+            </h3>
+
+            <p>
+                Data engineering and development
+            </p>
+
+        </div>
+
+
+        <div class="timeline-item glass">
+
+            <h3>
+                Sr. Manager,
+                Database Development
+            </h3>
+
+            <p>
+                Database development and management
+            </p>
+
+        </div>
+
+
+        <div class="timeline-item glass">
+
+            <h3>
+                Sr. Database Developer
+                and Administrator
+            </h3>
+
+            <p>
+                Database development and administration
+            </p>
+
+        </div>
+
+
+        <div class="timeline-item glass">
+
+            <h3>
+                Database Consultant
+            </h3>
+
+            <p>
+                Consulting and database technology
+            </p>
+
+        </div>
+
+
+        <div class="timeline-item glass">
+
+            <h3>
+                20+ Years in Technology
+            </h3>
+
+            <p>
+                A long-term career in technology,
+                data, engineering, and leadership.
+            </p>
+
+        </div>
+
+
+        <div class="timeline-item glass">
+
+            <h3>
+                Global Travel
+            </h3>
+
+            <p>
+                Traveling between countries
+                throughout his career.
+            </p>
+
+        </div>
+
+
+    </div>
+
 </section>
 
-<!-- SCRIPT -->
+
+<!-- =========================
+     SKILLS
+========================= -->
+
+<section
+    class="section reveal"
+    id="skills"
+>
+
+    <div class="section-header">
+
+        <div class="section-number">
+            03 — SKILLS
+        </div>
+
+        <h2>
+            Areas of Expertise
+        </h2>
+
+        <p>
+            Core areas of technology and professional expertise.
+        </p>
+
+    </div>
+
+
+    <div class="skill-grid">
+
+
+        <div class="skill glass">
+
+            <div class="skill-icon">
+                🏗️
+            </div>
+
+            <h3>
+                Data Architecture
+            </h3>
+
+            <p>
+                Designing and leading enterprise
+                data architecture.
+            </p>
+
+        </div>
+
+
+        <div class="skill glass">
+
+            <div class="skill-icon">
+                👥
+            </div>
+
+            <h3>
+                Leadership
+            </h3>
+
+            <p>
+                Team leadership and technology management.
+            </p>
+
+        </div>
+
+
+        <div class="skill glass">
+
+            <div class="skill-icon">
+                🧩
+            </div>
+
+            <h3>
+                Problem Solving
+            </h3>
+
+            <p>
+                Solving complex technology and
+                data challenges.
+            </p>
+
+        </div>
+
+
+        <div class="skill glass">
+
+            <div class="skill-icon">
+                💻
+            </div>
+
+            <h3>
+                Technology
+            </h3>
+
+            <p>
+                Enterprise technology and
+                engineering experience.
+            </p>
+
+        </div>
+
+
+        <div class="skill glass">
+
+            <div class="skill-icon">
+                📊
+            </div>
+
+            <h3>
+                DTC Measurement
+            </h3>
+
+            <p>
+                Data-driven measurement and analytics.
+            </p>
+
+        </div>
+
+
+        <div class="skill glass">
+
+            <div class="skill-icon">
+                🧬
+            </div>
+
+            <h3>
+                Life Sciences
+            </h3>
+
+            <p>
+                Technology experience within
+                the life sciences industry.
+            </p>
+
+        </div>
+
+
+        <div class="skill glass">
+
+            <div class="skill-icon">
+                🖥️
+            </div>
+
+            <h3>
+                Computer Engineering
+            </h3>
+
+            <p>
+                Computer engineering and
+                software technology.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     TECHNOLOGY BANNER
+========================= -->
+
+<section class="section reveal">
+
+    <div class="tech-banner">
+
+        <h2>
+            Building Technology
+            That Scales.
+        </h2>
+
+        <p>
+            Combining data architecture,
+            engineering, leadership, and
+            problem solving to build enterprise systems.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PROJECTS
+========================= -->
+
+<section
+    class="section reveal"
+    id="projects"
+>
+
+    <div class="section-header">
+
+        <div class="section-number">
+            04 — PROJECTS
+        </div>
+
+        <h2>
+            Projects & Platforms
+        </h2>
+
+        <p>
+            Enterprise technology and data
+            projects throughout my career.
+        </p>
+
+    </div>
+
+
+    <div class="project-grid">
+
+
+        <div class="project glass">
+
+            <div class="project-number">
+                PROJECT 01
+            </div>
+
+            <h3>
+                Enterprise Systems
+            </h3>
+
+            <p>
+                Built large-scale data systems.
+            </p>
+
+        </div>
+
+
+        <div class="project glass">
+
+            <div class="project-number">
+                PROJECT 02
+            </div>
+
+            <h3>
+                Customer Data Platforms
+            </h3>
+
+            <p>
+                Customer data platform initiatives.
+            </p>
+
+        </div>
+
+
+        <div class="project glass">
+
+            <div class="project-number">
+                PROJECT 03
+            </div>
+
+            <h3>
+                Clear Sky
+            </h3>
+
+            <p>
+                Enterprise technology project.
+            </p>
+
+        </div>
+
+
+        <div class="project glass">
+
+            <div class="project-number">
+                PROJECT 04
+            </div>
+
+            <h3>
+                Clear View
+            </h3>
+
+            <p>
+                Technology and data platform project.
+            </p>
+
+        </div>
+
+
+        <div class="project glass">
+
+            <div class="project-number">
+                PROJECT 05
+            </div>
+
+            <h3>
+                MR
+            </h3>
+
+            <p>
+                Technology project and platform work.
+            </p>
+
+        </div>
+
+
+        <div class="project glass">
+
+            <div class="project-number">
+                PROJECT 06
+            </div>
+
+            <h3>
+                Orchestrated Customer Engagement
+            </h3>
+
+            <p>
+                Customer engagement technology initiative.
+            </p>
+
+        </div>
+
+
+        <div class="project glass">
+
+            <div class="project-number">
+                PROJECT 07
+            </div>
+
+            <h3>
+                Building Websites
+            </h3>
+
+            <p>
+                Designing and building websites
+                using modern technology.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     EDUCATION
+========================= -->
+
+<section
+    class="section reveal"
+    id="education"
+>
+
+    <div class="section-header">
+
+        <div class="section-number">
+            05 — EDUCATION
+        </div>
+
+        <h2>
+            Education
+        </h2>
+
+        <p>
+            Academic journey from India to the USA.
+        </p>
+
+    </div>
+
+
+    <div class="education glass">
+
+        <div class="skill-icon">
+            🎓
+        </div>
+
+        <h3>
+            Academic Journey
+        </h3>
+
+
+        <div class="edu-card">
+
+            <strong>
+                India • 2000–2005
+            </strong>
+
+            <br>
+
+            Doctor Babasaheb Ambedkar
+            Marathwada University
+
+        </div>
+
+
+        <div class="edu-card">
+
+            <strong>
+                USA • 2006–2007
+            </strong>
+
+            <br>
+
+            University of Bridgeport
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <strong>
+        Raj Mahida
+    </strong>
+
+    <br>
+
+    Director of Data Architectures •
+    Computer Engineer • Technology Leader
+
+    <br><br>
+
+    © 2026 Raj Mahida
+
+</footer>
+
+
 <script>
-function enterSite() {
-    document.getElementById("homeScreen").style.display = "none";
+
+/* =========================
+   ENTER SITE
+========================= */
+
+function enterSite(){
+
+    const screen =
+        document.getElementById("homeScreen");
+
+    screen.style.opacity = "0";
+
+    setTimeout(function(){
+
+        screen.style.display = "none";
+
+        window.scrollTo(0,0);
+
+    },700);
 }
+
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+
+const observer =
+    new IntersectionObserver(
+
+        function(entries){
+
+            entries.forEach(function(entry){
+
+                if(entry.isIntersecting){
+
+                    entry.target
+                        .classList
+                        .add("show");
+
+                }
+
+            });
+
+        },
+
+        {
+            threshold:0.12
+        }
+
+    );
+
+
+document
+    .querySelectorAll(".reveal")
+    .forEach(function(element){
+
+        observer.observe(element);
+
+    });
+
+
+/* =========================
+   ESCAPE KEY
+========================= */
+
+document.addEventListener(
+    "keydown",
+    function(event){
+
+        if(event.key === "Escape"){
+
+            const screen =
+                document.getElementById(
+                    "homeScreen"
+                );
+
+            if(screen.style.display !== "none"){
+
+                enterSite();
+
+            }
+
+        }
+
+    }
+);
+
 </script>
+
 
 </body>
 </html>
